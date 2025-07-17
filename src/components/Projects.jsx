@@ -13,7 +13,7 @@ const projectData = [
   {
     title: "Task Management App",
     description: "Collaborative tool with real-time updates and team features.",
-    tech: ["React", "Express", "Socket.io", "PostgreSQL"],
+    tech: ["React", "Express", "Material UI", "MongoDB"],
     github: "https://github.com/muhammadAsh1r/todo-app.git",
     live: "#",
   },
