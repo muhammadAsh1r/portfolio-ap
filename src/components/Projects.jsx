@@ -7,7 +7,7 @@ const projectData = [
     description:
       "Full-stack e-commerce solution with payment integration, user auth, and admin dashboard.",
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "#",
+    github: "https://github.com/muhammadAsh1r/e-commerce",
     live: "#",
   },
   {

@@ -34,17 +34,19 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-yellow-400 text-black p-3 rounded-lg hover:bg-yellow-300 transition-colors"
-              >
+                >
                 <Github size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/muhammad-ashir-khan-2b3aa7286/"
+                target="_blank"
                 className="bg-yellow-400 text-black p-3 rounded-lg hover:bg-yellow-300 transition-colors"
-              >
+                >
                 <Linkedin size={24} />
               </a>
               <a
                 href="#"
+                target="_blank"
                 className="bg-yellow-400 text-black p-3 rounded-lg hover:bg-yellow-300 transition-colors"
               >
                 <Mail size={24} />
