@@ -15,7 +15,7 @@ const projectData = [
     description: "Collaborative tool with real-time updates and team features.",
     tech: ["React", "Express", "Material UI", "MongoDB"],
     github: "https://github.com/muhammadAsh1r/todo-app.git",
-    live: "#",
+    live: "https://todo-app2-0-rosy.vercel.app/",
   },
   {
     title: "Weather Dashboard",
