@@ -42,7 +42,7 @@ const Hero = () => {
         {/* Right: Profile Picture */}
         <div className="flex justify-center">
           <img
-            src="../../public/my_pic.jpg" // 🔁 Replace with your actual image path
+            src="/public/my_pic.jpg" // 🔁 Replace with your actual image path
             alt="Ashir"
             className="w-64 h-64 rounded-full object-cover border-4 border-yellow-400 shadow-lg"
           />
