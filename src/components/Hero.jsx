@@ -17,8 +17,9 @@ const Hero = () => {
             Full Stack Developer | MERN & Django
           </p>
           <p className="text-lg mb-8 text-gray-400 max-w-xl">
-            I help build full-stack web apps — from simple landing pages to complete SaaS platforms and dashboards.
-            I work with React, Node.js, MongoDB, Mongoose, and Django.
+            I help build full-stack web apps — from simple landing pages to
+            complete SaaS platforms and dashboards. I work with React, Node.js,
+            MongoDB, Mongoose, and Django.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
@@ -39,10 +40,9 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right: Profile Picture */}
         <div className="flex justify-center">
           <img
-            src="/public/my_pic.jpg" // 🔁 Replace with your actual image path
+            src="my_pic.jpg"
             alt="Ashir"
             className="w-64 h-64 rounded-full object-cover border-4 border-yellow-400 shadow-lg"
           />
