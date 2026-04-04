@@ -3,6 +3,14 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projectData = [
   {
+    title: "Food Order App",
+    description:
+      "A modern full-stack food ordering platform with a responsive Next.js frontend, Django REST Framework backend, and a comprehensive admin dashboard for menu management.",
+    tech: ["Next.js 15", "Django", "Tailwind CSS v4", "DRF"],
+    github: "https://github.com/muhammadAsh1r/food-order-app.git",
+    live: "https://food-order-app-git-main-ashirs-projects-4082be2a.vercel.app/",
+  },
+  {
     title: "Students Expense App",
     description:
       "Full-stack e-commerce solution with CRUD operations, user auth, and admin dashboard.",
