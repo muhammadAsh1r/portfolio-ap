@@ -19,12 +19,12 @@ const projectData = [
     live: "https://students-expense.vercel.app/",
   },
   {
-    title: "E-Commerce Platform",
+    title: "TechStore",
     description:
-      "Full-stack e-commerce solution with payment integration, user auth, and admin dashboard.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com/muhammadAsh1r/e-commerce",
-    live: "#",
+      "A premium MERN-stack e-commerce platform featuring a sophisticated 'Linear White' aesthetic. It offers a seamless shopping experience with Stripe-integrated checkout, real-time cart updates, and a comprehensive admin suite for inventory, orders, and analytics.",
+    tech: ["MERN Stack", "Stripe", "Tailwind CSS", "Node.js"],
+    github: "https://github.com/muhammadAsh1r/e-commerce.git",
+    live: "https://e-commerce-pi-jade.vercel.app/",
   },
   {
     title: "Task Management App",
