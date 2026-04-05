@@ -38,7 +38,7 @@ const App = () => {
   }, [handleScroll]);
 
   return (
-    <div className="relative min-h-screen text-secondary selection:bg-primary selection:text-bg-dark">
+    <div className="relative min-h-screen transition-colors duration-500">
       {/* Scroll Progress Bar */}
       <div 
         ref={progressRef}
