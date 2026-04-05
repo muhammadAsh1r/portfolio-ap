@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, useState, useCallback } from "react";
+import React, { Suspense, lazy, useEffect, useState, useCallback, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ThemeToggle from "./components/ThemeToggle";
