@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative pt-32 pb-20 min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative pt-24 pb-12 min-h-screen flex items-center overflow-hidden">
       {/* Background Layered Text */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none select-none z-0">
          <span className="text-[20vw] font-black uppercase tracking-tighter whitespace-nowrap">
@@ -12,7 +12,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="text-center lg:text-left space-y-10">
             <div className="inline-flex items-center space-x-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em] animate-pulse">
               <span className="relative flex h-2.5 w-2.5">
@@ -23,13 +23,13 @@ const Hero = () => {
             </div>
             
             <div className="space-y-4">
-               <h1 className="text-7xl md:text-9xl font-black leading-tight tracking-tighter text-secondary">
+               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter text-secondary">
                  Building <span className="text-primary italic">Full Stack</span> <br />
                  Web Applications.
                </h1>
             </div>
             
-            <p className="text-xl md:text-3xl text-secondary/60 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+            <p className="text-lg md:text-2xl lg:text-3xl text-secondary/60 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
               I’m <span className="text-primary font-bold">Ashir</span>, a Full Stack Developer specialized in 
               <span className="text-secondary font-medium italic underline decoration-primary/40 underline-offset-8"> MERN and Django </span> 
               dedicated to building secure, scalable, and user-centric web applications.
@@ -59,7 +59,7 @@ const Hero = () => {
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem]">
+            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
               {/* Complex decorative elements */}
               <div className="absolute -inset-10 border border-primary/10 rounded-full animate-[spin_20s_linear_infinite]" />
               <div className="absolute -inset-20 border border-accent/5 rounded-full animate-[spin_30s_linear_infinite_reverse]" />
