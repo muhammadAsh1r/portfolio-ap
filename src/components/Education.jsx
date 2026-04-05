@@ -6,7 +6,7 @@ const Education = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center mb-20">
           <h2 className="text-4xl md:text-5xl font-black text-secondary tracking-tighter mb-4 text-center">
-            Academic <span className="text-primary italic">Foundation</span>
+            Education <span className="text-primary italic">Background</span>
           </h2>
           <div className="h-1.5 w-32 bg-primary rounded-full" />
         </div>

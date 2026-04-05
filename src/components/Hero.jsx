@@ -24,15 +24,15 @@ const Hero = () => {
             
             <div className="space-y-4">
                <h1 className="text-7xl md:text-9xl font-black leading-tight tracking-tighter text-secondary">
-                 Crafting <span className="text-primary italic">Digital</span> <br />
-                 Experiences.
+                 Building <span className="text-primary italic">Full Stack</span> <br />
+                 Web Applications.
                </h1>
             </div>
             
             <p className="text-xl md:text-3xl text-secondary/60 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-              I’m <span className="text-primary font-bold">Ashir</span>, an Architect of the Digital World, specialized in 
-              <span className="text-secondary font-medium italic underline decoration-primary/40 underline-offset-8"> Scalable Ecosystems </span> 
-              and Modern Web Architectures.
+              I’m <span className="text-primary font-bold">Ashir</span>, a Full Stack Developer specialized in 
+              <span className="text-secondary font-medium italic underline decoration-primary/40 underline-offset-8"> MERN and Django </span> 
+              dedicated to building secure, scalable, and user-centric web applications.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start pt-4">
@@ -40,7 +40,7 @@ const Hero = () => {
                 href="#projects"
                 className="group relative bg-primary text-bg-dark px-12 py-5 rounded-full font-black text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,197,112,0.3)]"
               >
-                <span className="relative z-10 transition-all uppercase tracking-widest">Explore Ventures</span>
+                <span className="relative z-10 transition-all uppercase tracking-widest">View My Projects</span>
                 <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-20" />
               </a>
               <a
@@ -66,7 +66,7 @@ const Hero = () => {
               
               <div className="relative w-full h-full rounded-[3rem] overflow-hidden border-8 border-bg-dark/40 shadow-[0_0_100px_rgba(26,50,99,0.5)] transition-all duration-700 hover:rounded-3xl hover:scale-[1.02]">
                 <img
-                  src="my_pic.jpg"
+                  src="my_pic.webp"
                   alt="Ashir"
                   loading="eager"
                   className="w-full h-full object-cover grayscale brightness-110 hover:grayscale-0 transition-all duration-1000"
@@ -86,4 +86,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default React.memo(Hero);

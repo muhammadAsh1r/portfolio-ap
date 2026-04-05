@@ -19,14 +19,16 @@ const SectionLoader = () => (
 );
 
 const App = () => {
-  const [scrollWidth, setScrollWidth] = useState(0);
-
+  const progressRef = useRef(null);
+  
   const handleScroll = useCallback(() => {
     requestAnimationFrame(() => {
       const totalScroll = document.documentElement.scrollTop;
       const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scroll = `${(totalScroll / windowHeight) * 100}%`;
-      setScrollWidth(scroll);
+      if (progressRef.current) {
+        progressRef.current.style.width = scroll;
+      }
     });
   }, []);
 
@@ -39,8 +41,9 @@ const App = () => {
     <div className="relative min-h-screen text-secondary selection:bg-primary selection:text-bg-dark">
       {/* Scroll Progress Bar */}
       <div 
+        ref={progressRef}
         className="fixed top-0 left-0 h-1 bg-primary z-[60] transition-all duration-100 ease-out" 
-        style={{ width: scrollWidth }}
+        style={{ width: "0%" }}
       />
       
       <div className="mesh-gradient" />

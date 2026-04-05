@@ -34,9 +34,9 @@ const Skills = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center mb-24 px-4 text-center">
-          <span className="text-secondary/40 text-[10px] font-black uppercase tracking-[0.5em] mb-4">Competencies</span>
+          <span className="text-secondary/40 text-[10px] font-black uppercase tracking-[0.5em] mb-4">Expertise</span>
           <h2 className="text-5xl md:text-7xl font-black text-secondary tracking-tighter mb-4">
-            Technical <span className="text-primary italic">Arsenal</span>
+            Skills & <span className="text-primary italic">Technologies</span>
           </h2>
           <div className="h-1.5 w-32 bg-primary rounded-full group-hover:w-48 transition-all duration-700 mt-4" />
         </div>
@@ -59,7 +59,7 @@ const Skills = () => {
               
               {/* Complex hover detail */}
               <div className="absolute -bottom-10 group-hover:bottom-4 left-0 w-full opacity-0 group-hover:opacity-100 transition-all duration-500">
-                 <span className="text-[8px] font-black text-primary uppercase tracking-[0.3em]">Mastered</span>
+                 <span className="text-[8px] font-black text-primary uppercase tracking-[0.3em]">Proficient</span>
               </div>
 
               {/* Background glow */}

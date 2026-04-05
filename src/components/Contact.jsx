@@ -46,7 +46,7 @@ const Contact = () => {
           <div className="space-y-12">
             <div className="space-y-6">
               <h3 className="text-4xl font-black text-secondary tracking-tight">
-                Let's start a <br /><span className="text-primary italic">conversation</span>
+                Let's work <br /><span className="text-primary italic">together</span>
               </h3>
               <p className="text-secondary/60 text-lg font-light leading-relaxed max-w-md">
                 Always open to new opportunities, groundbreaking projects, or sharing insights about the latest in technology.

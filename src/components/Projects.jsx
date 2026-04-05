@@ -5,7 +5,7 @@ const projectData = [
   {
     title: "Food Order App",
     description:
-      "A modern full-stack food ordering platform with a responsive Next.js frontend, Django REST Framework backend, and a comprehensive admin dashboard for menu management.",
+      "Streamlined restaurant operations by replacing manual ordering with a Next.js and Django-based platform, featuring a real-time admin dashboard for reliable menu and order management.",
     tech: ["Next.js 15", "Django", "Tailwind CSS v4", "DRF"],
     github: "https://github.com/muhammadAsh1r/food-order-app.git",
     live: "https://food-order-app-git-main-ashirs-projects-4082be2a.vercel.app/",
@@ -13,7 +13,7 @@ const projectData = [
   {
     title: "Students Expense App",
     description:
-      "Full-stack e-commerce solution with CRUD operations, user auth, and admin dashboard.",
+      "Solves the difficulty of student budget tracking through a React and Django application with secure auth and data analytics, providing users with a clear overview of their daily spending.",
     tech: ["React", "Django", "PosteSQL", "Tailwind"],
     github: "https://github.com/muhammadAsh1r/students-expense.git",
     live: "https://students-expense.vercel.app/",
@@ -21,28 +21,31 @@ const projectData = [
   {
     title: "TechStore",
     description:
-      "A premium MERN-stack e-commerce platform featuring a sophisticated 'Linear White' aesthetic. It offers a seamless shopping experience with Stripe-integrated checkout, real-time cart updates, and a comprehensive admin suite for inventory, orders, and analytics.",
+      "Addresses the gap for local electronics shops by providing a MERN-stack e-commerce platform with Stripe integration and a full admin suite, enabling a complete digital sales cycle.",
     tech: ["MERN Stack", "Stripe", "Tailwind CSS", "Node.js"],
     github: "https://github.com/muhammadAsh1r/e-commerce.git",
     live: "https://e-commerce-pi-jade.vercel.app/",
   },
   {
     title: "Task Management App",
-    description: "Collaborative tool with real-time updates and team features.",
-    tech: ["React", "Express", "Material UI", "MongoDB"],
-    github: "https://github.com/muhammadAsh1r/todo-app.git",
+    description:
+      "Provides a lightweight alternative to complex tools for daily task tracking, built with the MERN stack and JWT authentication to ensure a fast, secure, and organized user workflow.",
+    tech: ["MERN Stack", "Vite", "Tailwind CSS", "JWT", "Node.js"],
+    github: "https://github.com/muhammadAsh1r/todo-app2.0.git",
     live: "https://todo-app2-0-rosy.vercel.app/",
   },
   {
     title: "Weather Dashboard",
-    description: "Weather app with forecasts, location search, and charts.",
+    description:
+      "Solves the need for centralized weather data by integrating a React interface with external APIs and Chart.js, delivering intuitive multi-location forecasts and trend visualization.",
     tech: ["React", "API", "Chart.js", "Tailwind"],
     github: "#",
     live: "#",
   },
   {
     title: "Car Rental App",
-    description: "Weather app with forecasts, location search, and charts.",
+    description:
+      "Simplified the fragmented car rental process with a high-performance React and Vite UI, focusing on an efficient browsing and reservation experience for both renters and providers.",
     tech: ["React", "Vite", "Tailwind"],
     github: "https://github.com/muhammadAsh1r/car-rental-app",
     live: "https://car-rental-app-psi-ten.vercel.app/",
@@ -55,7 +58,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center mb-20">
           <h2 className="text-4xl md:text-5xl font-black text-secondary tracking-tighter mb-4 text-center">
-            Featured <span className="text-primary italic">Ventures</span>
+            Featured <span className="text-primary italic">Projects</span>
           </h2>
           <div className="h-1.5 w-32 bg-primary rounded-full" />
         </div>
