@@ -66,7 +66,7 @@ const Hero = () => {
               
               <div className="relative w-full h-full rounded-[3rem] overflow-hidden border-8 border-bg-dark/40 shadow-[0_0_100px_rgba(26,50,99,0.5)] transition-all duration-700 hover:rounded-3xl hover:scale-[1.02]">
                 <img
-                  src="my_pic.webp"
+                  src="/my_pic.webp"
                   alt="Ashir"
                   loading="eager"
                   className="w-full h-full object-cover grayscale brightness-110 hover:grayscale-0 transition-all duration-1000"

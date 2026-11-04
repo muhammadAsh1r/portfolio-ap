@@ -1,16 +1,20 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 
 const ThemeToggle = () => {
-  const [isLight, setIsLight] = useState(
-    document.documentElement.classList.contains("light")
-  );
+  const [isLight, setIsLight] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
       document.documentElement.classList.add("light");
       setIsLight(true);
+    } else {
+      setIsLight(document.documentElement.classList.contains("light"));
     }
   }, []);
 
@@ -26,10 +30,19 @@ const ThemeToggle = () => {
     }
   };
 
+  if (!mounted) {
+    return (
+      <div 
+        className="w-11 h-11 p-3 rounded-2xl bg-secondary/5 border border-secondary/10 opacity-0"
+        aria-hidden="true"
+      />
+    );
+  }
+
   return (
     <button
       onClick={toggleTheme}
-      className="p-3 rounded-2xl bg-secondary/5 border border-secondary/10 text-primary hover:bg-primary hover:text-bg-dark transition-all duration-300 shadow-xl"
+      className="p-3 rounded-2xl bg-secondary/5 border border-secondary/10 text-primary hover:bg-primary hover:text-bg-dark transition-all duration-300 shadow-xl cursor-pointer"
       aria-label="Toggle Theme"
     >
       {isLight ? <Moon size={20} /> : <Sun size={20} />}

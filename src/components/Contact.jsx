@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useRef, useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
@@ -11,18 +13,20 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_rg1tgok",   // Replace with your EmailJS service ID
-        "template_29zf6to",  // Replace with your EmailJS template ID
+        "service_rg1tgok",   // EmailJS service ID
+        "template_29zf6to",  // EmailJS template ID
         formRef.current,
-        "Vg1pG6He_8a7WzDy4"  // Replace with your EmailJS public key
+        "Vg1pG6He_8a7WzDy4"  // EmailJS public key
       )
       .then(
-        (result) => {
+        () => {
           setFlashMessage({ type: "success", text: "✅ Message sent successfully!" });
-          formRef.current.reset();
+          if (formRef.current) {
+            formRef.current.reset();
+          }
           setTimeout(() => setFlashMessage(null), 3000);
         },
-        (error) => {
+        () => {
           setFlashMessage({ type: "error", text: "❌ Failed to send message. Please try again." });
           setTimeout(() => setFlashMessage(null), 3000);
         }
@@ -154,7 +158,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="group relative w-full bg-primary text-bg-dark py-5 rounded-2xl font-black uppercase tracking-[0.2em] overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="group relative w-full bg-primary text-bg-dark py-5 rounded-2xl font-black uppercase tracking-[0.2em] overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
               >
                 <span className="relative z-10">Send Message</span>
                 <div className="absolute inset-0 bg-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
