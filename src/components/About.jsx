@@ -33,23 +33,28 @@ const About = () => {
           </div>
 
           <div className="space-y-10 text-lg">
-            <div className="bg-secondary/5 backdrop-blur-3xl border border-secondary/10 p-10 md:p-14 rounded-[3rem] space-y-8 shadow-2xl relative overflow-hidden group">
+            <div className="bg-secondary/5 backdrop-blur-3xl border border-secondary/10 p-8 sm:p-12 md:p-14 rounded-[3rem] space-y-6 shadow-2xl relative overflow-hidden group">
                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-primary/10 transition-all duration-700" />
-               <p className="text-secondary/70 leading-relaxed font-light text-xl first-letter:text-6xl first-letter:font-black first-letter:text-primary first-letter:mr-2 first-letter:float-left uppercase tracking-tight">
-                  I am a Full Stack Developer specializing in the MERN stack and Django. I focus on building practical, high-performance web applications that solve real-world problems through clean code and intuitive user interfaces.
+               <p className="text-secondary/90 leading-relaxed font-normal text-lg sm:text-xl">
+                  I’m a <strong className="font-bold text-primary">Full-Stack Developer</strong> focused on building practical, high-performance web applications,{" "}
+                  <strong className="font-bold text-secondary">SaaS products, and AI-powered platforms</strong> that solve real-world problems.
                </p>
-               <p className="text-secondary/50 leading-relaxed font-light">
-                  From developing interactive dashboards to secure RESTful APIs, I enjoy the challenge of building reliable systems that provide a seamless experience for both users and developers.
+               <p className="text-secondary/70 leading-relaxed font-light text-base sm:text-lg">
+                  I work across the stack using technologies like{" "}
+                  <strong className="font-semibold text-secondary">Next.js, React, TypeScript, Django, Node.js, PostgreSQL, and MongoDB</strong>, from crafting intuitive user interfaces to developing secure APIs, authentication systems, database architectures, and cloud-deployed applications.
                </p>
-               <div className="pt-8 border-t border-secondary/10">
-                  <p className="text-2xl font-black text-primary italic leading-tight">
-                    "I believe in writing maintainable code and staying curious about new technologies to deliver the best possible value."
+               <p className="text-secondary/60 leading-relaxed font-light text-base sm:text-lg">
+                  I enjoy turning ideas into reliable, production-ready products while continuously learning new technologies and improving the way I build software.
+               </p>
+               <div className="pt-6 border-t border-secondary/10">
+                  <p className="text-xl sm:text-2xl font-black text-primary italic leading-snug">
+                    “I believe great software is built with clean code, thoughtful design, and a constant curiosity to learn and improve.”
                   </p>
                </div>
             </div>
             
             <div className="grid grid-cols-2 gap-6">
-                {['Full-Stack Web Apps', 'Interactive Dashboards', 'RESTful APIs', 'Database Management'].map((skill, index) => (
+                {['Full-Stack Web Apps', 'SaaS & AI Platforms', 'APIs & Auth Systems', 'Cloud & Databases'].map((skill, index) => (
                  <div key={index} className="flex items-center space-x-4 text-secondary/40 text-[10px] font-black uppercase tracking-[0.3em]">
                     <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_10px_rgba(255,197,112,0.8)]" />
                     <span>{skill}</span>

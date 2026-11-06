@@ -68,17 +68,17 @@ const Certifications = ({ limit = 3, isFullPage = false }) => {
         </div>
 
         {/* Certificate Cards Grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 ${isFullPage ? "lg:grid-cols-2" : "lg:grid-cols-3"} gap-8 max-w-7xl mx-auto`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${isFullPage ? "lg:grid-cols-2 gap-8" : "lg:grid-cols-3 gap-6"} max-w-7xl mx-auto`}>
           {displayedCerts.map((cert, index) => (
             <div
               key={index}
-              className="group flex flex-col bg-bg-dark/40 backdrop-blur-xl border border-secondary/10 rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-2xl hover:-translate-y-2"
+              className={`group flex flex-col bg-bg-dark/40 backdrop-blur-xl border border-secondary/10 ${isFullPage ? "rounded-3xl" : "rounded-2xl"} overflow-hidden hover:border-primary/30 transition-all duration-500 shadow-2xl hover:-translate-y-1.5`}
             >
               {/* PDF Document Showcase Frame */}
-              <div className="relative p-5 pb-0 bg-gradient-to-b from-secondary/5 to-transparent">
+              <div className={`relative ${isFullPage ? "p-5 pb-0" : "p-3.5 pb-0"} bg-gradient-to-b from-secondary/5 to-transparent`}>
                 <div
                   onClick={() => setActiveModalCert(cert)}
-                  className="relative aspect-[1650/1275] w-full rounded-2xl overflow-hidden bg-white/5 border border-secondary/10 shadow-lg cursor-pointer group/preview"
+                  className={`relative aspect-[1650/1275] w-full ${isFullPage ? "rounded-2xl" : "rounded-xl"} overflow-hidden bg-white/5 border border-secondary/10 shadow-lg cursor-pointer group/preview`}
                 >
                   <img
                     src={cert.previewImage}
@@ -89,68 +89,76 @@ const Certifications = ({ limit = 3, isFullPage = false }) => {
 
                   {/* Interactive Hover Overlay */}
                   <div className="absolute inset-0 bg-bg-dark/60 opacity-0 group-hover/preview:opacity-100 transition-opacity duration-300 backdrop-blur-[2px] flex items-center justify-center gap-3">
-                    <span className="inline-flex items-center gap-2 bg-primary text-bg-dark px-5 py-2.5 rounded-full font-black text-xs uppercase tracking-widest shadow-2xl transform translate-y-3 group-hover/preview:translate-y-0 transition-transform duration-300">
-                      <Eye size={16} /> Preview PDF
+                    <span className={`inline-flex items-center gap-2 bg-primary text-bg-dark ${isFullPage ? "px-5 py-2.5 text-xs" : "px-4 py-2 text-[11px]"} rounded-full font-black uppercase tracking-widest shadow-2xl transform translate-y-2 group-hover/preview:translate-y-0 transition-transform duration-300`}>
+                      <Eye size={isFullPage ? 16 : 14} /> Preview PDF
                     </span>
                   </div>
 
                   {/* Top-right Verified Tag */}
-                  <div className="absolute top-3 right-3 z-10">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-bg-dark/80 backdrop-blur-md text-primary text-[10px] font-black uppercase tracking-wider rounded-full border border-primary/20 shadow-md">
-                      <CheckCircle2 size={12} /> Verified
+                  <div className={`absolute ${isFullPage ? "top-3 right-3" : "top-2.5 right-2.5"} z-10`}>
+                    <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 bg-bg-dark/80 backdrop-blur-md text-primary ${isFullPage ? "text-[10px]" : "text-[9px]"} font-black uppercase tracking-wider rounded-full border border-primary/20 shadow-md`}>
+                      <CheckCircle2 size={isFullPage ? 12 : 11} /> Verified
                     </span>
                   </div>
                 </div>
               </div>
 
               {/* Certificate Content */}
-              <div className="p-8 flex flex-col flex-grow">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-primary text-xs font-black uppercase tracking-[0.2em]">
+              <div className={`${isFullPage ? "p-8" : "p-5"} flex flex-col flex-grow`}>
+                <div className="flex items-center justify-between mb-2">
+                  <span className={`text-primary ${isFullPage ? "text-xs" : "text-[11px]"} font-black uppercase tracking-[0.2em] truncate mr-2`}>
                     {cert.issuer}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 text-secondary/40 text-xs font-bold">
-                    <Calendar size={13} /> {cert.date}
+                  <span className={`inline-flex items-center gap-1.5 text-secondary/40 ${isFullPage ? "text-xs" : "text-[11px]"} font-bold shrink-0`}>
+                    <Calendar size={isFullPage ? 13 : 12} /> {cert.date}
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-black mb-3 text-secondary group-hover:text-primary transition-colors tracking-tight">
+                <h3
+                  className={`${isFullPage ? "text-2xl mb-3" : "text-lg mb-2 line-clamp-1"} font-black text-secondary group-hover:text-primary transition-colors tracking-tight`}
+                  title={cert.title}
+                >
                   {cert.title}
                 </h3>
 
-                <p className="text-secondary/60 mb-6 text-sm leading-relaxed flex-grow">
+                <p className={`text-secondary/60 ${isFullPage ? "mb-6 text-sm leading-relaxed" : "mb-3 text-xs leading-relaxed line-clamp-2"} flex-grow`}>
                   {cert.description}
                 </p>
 
                 {/* Skills Chips */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {cert.skills.map((skill) => (
+                <div className={`flex flex-wrap gap-1.5 ${isFullPage ? "mb-8" : "mb-4"}`}>
+                  {(isFullPage ? cert.skills : cert.skills.slice(0, 3)).map((skill) => (
                     <span
                       key={skill}
-                      className="bg-secondary/5 text-secondary/50 px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest border border-secondary/10"
+                      className={`bg-secondary/5 text-secondary/50 ${isFullPage ? "px-3 py-1 text-[10px]" : "px-2.5 py-0.5 text-[9px]"} rounded-lg font-bold uppercase tracking-widest border border-secondary/10`}
                     >
                       {skill}
                     </span>
                   ))}
+                  {!isFullPage && cert.skills.length > 3 && (
+                    <span className="bg-primary/5 text-primary/80 px-2 py-0.5 rounded-lg text-[9px] font-bold">
+                      +{cert.skills.length - 3}
+                    </span>
+                  )}
                 </div>
 
                 {/* Action Buttons: View PDF & Verify Link */}
-                <div className="flex items-center justify-between pt-6 border-t border-secondary/5 gap-3">
-                  <div className="flex items-center gap-3">
+                <div className={`flex items-center justify-between ${isFullPage ? "pt-6" : "pt-3.5"} border-t border-secondary/5 gap-2`}>
+                  <div className="flex items-center gap-2">
                     <button
                       onClick={() => setActiveModalCert(cert)}
-                      className="inline-flex items-center gap-2 bg-primary text-bg-dark px-4 py-2.5 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-secondary transition-all shadow-md active:scale-95 cursor-pointer"
+                      className={`inline-flex items-center gap-1.5 bg-primary text-bg-dark ${isFullPage ? "px-4 py-2.5 text-xs" : "px-3 py-1.5 text-[11px]"} rounded-xl font-black uppercase tracking-wider hover:bg-secondary transition-all shadow-md active:scale-95 cursor-pointer`}
                     >
-                      <Eye size={15} /> Preview
+                      <Eye size={isFullPage ? 15 : 13} /> Preview
                     </button>
                     <a
                       href={cert.pdfUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-secondary/60 hover:text-primary px-2.5 py-2 text-xs font-bold uppercase tracking-wider transition-colors"
+                      className={`inline-flex items-center gap-1 text-secondary/60 hover:text-primary ${isFullPage ? "px-2.5 py-2 text-xs" : "px-2 py-1.5 text-[11px]"} font-bold uppercase tracking-wider transition-colors`}
                       title="Open full PDF file in a new tab"
                     >
-                      <FileText size={14} /> PDF
+                      <FileText size={isFullPage ? 14 : 13} /> PDF
                     </a>
                   </div>
 
@@ -159,9 +167,9 @@ const Certifications = ({ limit = 3, isFullPage = false }) => {
                       href={cert.verifyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-secondary/60 hover:text-primary transition-colors text-xs font-bold uppercase tracking-wider"
+                      className={`inline-flex items-center gap-1 text-secondary/60 hover:text-primary transition-colors ${isFullPage ? "text-xs" : "text-[11px]"} font-bold uppercase tracking-wider`}
                     >
-                      Verify <ExternalLink size={13} />
+                      Verify <ExternalLink size={isFullPage ? 13 : 12} />
                     </a>
                   )}
                 </div>

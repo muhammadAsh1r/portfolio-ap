@@ -1,5 +1,17 @@
 export const certificationsData = [
   {
+    title: "Building Web Applications in Django",
+    issuer: "University of Michigan",
+    date: "November 2026",
+    credentialId: "1VUASFZ76U4N",
+    description:
+      "Deepened backend web development skills with Django, focusing on Object-Relational Mapping (ORM) and data modeling, views, templates, form handling, session management, and user authentication instructed by Dr. Charles Severance.",
+    skills: ["Django", "Python", "ORM & Models", "Web Applications", "Backend Development", "Authentication"],
+    previewImage: "/certificates/building-web-applications-in-django.webp",
+    pdfUrl: "/certificates/building-web-applications-in-django.pdf",
+    verifyUrl: "https://coursera.org/verify/1VUASFZ76U4N",
+  },
+  {
     title: "Web Application Technologies and Django",
     issuer: "University of Michigan",
     date: "November 2026",

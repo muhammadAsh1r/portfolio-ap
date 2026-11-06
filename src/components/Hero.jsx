@@ -13,7 +13,7 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="text-center lg:text-left space-y-10">
+          <div className="text-center lg:text-left space-y-7">
             <div className="inline-flex items-center space-x-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em] animate-pulse">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -22,36 +22,57 @@ const Hero = () => {
               <span>Available for Hire</span>
             </div>
             
-            <div className="space-y-4">
-               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter text-secondary">
-                 Building <span className="text-primary italic">Full Stack</span> <br />
-                 Web Applications.
+            <div>
+               <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.08] tracking-tighter text-secondary">
+                 I Build <span className="text-primary italic">Products That Scale.</span>
                </h1>
             </div>
-            
-            <p className="text-lg md:text-2xl lg:text-3xl text-secondary/60 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-              I’m <span className="text-primary font-bold">Ashir</span>, a Full Stack Developer specialized in 
-              <span className="text-secondary font-medium italic underline decoration-primary/40 underline-offset-8"> MERN and Django </span> 
-              dedicated to building secure, scalable, and user-centric web applications.
-            </p>
 
-            <div className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start pt-4">
+            <div className="space-y-3 max-w-2xl mx-auto lg:mx-0">
+              <p className="text-lg sm:text-xl md:text-2xl text-secondary font-medium leading-relaxed">
+                Full-Stack Developer specializing in{" "}
+                <strong className="text-secondary font-bold underline decoration-primary/40 underline-offset-4">
+                  modern web applications, AI-powered platforms, and SaaS products
+                </strong>
+                .
+              </p>
+              
+              <p className="text-base sm:text-lg md:text-xl text-secondary/70 font-light leading-relaxed">
+                I’m <strong className="text-primary font-bold">Ashir</strong> — I turn ideas into production-ready software using{" "}
+                <strong className="text-secondary font-semibold">
+                  Next.js, React, TypeScript, Django, Node.js, and modern cloud technologies.
+                </strong>
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start pt-2">
               <a
                 href="#projects"
-                className="group relative bg-primary text-bg-dark px-12 py-5 rounded-full font-black text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,197,112,0.3)]"
+                className="group relative bg-primary text-bg-dark px-10 py-4 sm:px-12 sm:py-5 rounded-full font-black text-base sm:text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,197,112,0.3)] text-center"
               >
-                <span className="relative z-10 transition-all uppercase tracking-widest">View My Projects</span>
+                <span className="relative z-10 transition-all uppercase tracking-widest">Explore My Work</span>
                 <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-20" />
               </a>
               <a
                 href="#contact"
-                className="px-12 py-5 rounded-full font-black text-lg border-2 border-secondary/10 text-secondary hover:bg-secondary/5 hover:border-primary transition-all uppercase tracking-widest"
+                className="px-10 py-4 sm:px-12 sm:py-5 rounded-full font-black text-base sm:text-lg border-2 border-secondary/15 text-secondary hover:bg-secondary/5 hover:border-primary transition-all uppercase tracking-widest text-center"
               >
-                Let's Talk
+                Let’s Work Together
               </a>
             </div>
 
-            <div className="pt-12 flex items-center justify-center lg:justify-start space-x-10 opacity-30">
+            {/* Focus Tagline */}
+            <div className="pt-2 flex items-center justify-center lg:justify-start gap-2.5 sm:gap-3 text-xs sm:text-sm font-black uppercase tracking-[0.2em] text-secondary/60">
+              <span>Full-Stack</span>
+              <span className="text-primary">•</span>
+              <span>SaaS</span>
+              <span className="text-primary">•</span>
+              <span>AI</span>
+              <span className="text-primary">•</span>
+              <span>Cloud</span>
+            </div>
+
+            <div className="pt-6 flex items-center justify-center lg:justify-start space-x-10 opacity-30">
                <div className="h-px w-20 bg-secondary" />
                <ChevronDown size={28} className="text-secondary animate-bounce" />
                <div className="h-px w-20 bg-secondary" />
@@ -76,7 +97,7 @@ const Hero = () => {
               
               {/* Floating tech pill */}
               <div className="absolute -bottom-6 -right-6 bg-accent text-white px-8 py-4 rounded-3xl font-black text-sm shadow-2xl transform rotate-6 animate-float">
-                 MERN & DJANGO
+                 FULL-STACK & AI
               </div>
             </div>
           </div>
