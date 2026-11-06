@@ -148,6 +148,17 @@ export default async function ProjectDetailPage({ params }) {
             </div>
           </div>
 
+          {/* Project Visual Showcase */}
+          {project.image && (
+            <div className="mb-16 rounded-3xl overflow-hidden border border-secondary/10 bg-secondary/5 shadow-2xl">
+              <img
+                src={project.image}
+                alt={`${project.title} Preview`}
+                className="w-full max-h-[520px] object-cover object-top"
+              />
+            </div>
+          )}
+
           {/* Overview & Problem/Solution Section */}
           <div className="space-y-12 mb-16">
             <div className="bg-bg-dark/40 backdrop-blur-xl border border-secondary/10 rounded-3xl p-8 sm:p-12 space-y-6 shadow-2xl">

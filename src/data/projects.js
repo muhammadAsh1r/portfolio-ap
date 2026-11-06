@@ -1,5 +1,44 @@
 export const projectsData = [
   {
+    slug: "makeresume-pro",
+    title: "MakeResume.pro",
+    category: "Full Stack (SaaS & AI)",
+    tagline: "AI-powered resume builder, ATS scoring engine, and career SaaS platform",
+    description:
+      "A commercial-grade SaaS platform that enables job seekers to generate ATS-optimized resumes and cover letters using generative AI, real-time rich text editing, drag-and-drop customization, and pixel-perfect PDF exports.",
+    overview:
+      "MakeResume (makeresume.pro) is an end-to-end AI resume builder and ATS compatibility scoring platform engineered for modern job seekers. Built with Next.js 16, React 19, and Supabase, it provides an intuitive TipTap rich-text editing experience, drag-and-drop section customization, headless Chromium serverless PDF generation, and an automated ATS scoring engine that grades resumes against industry standards.",
+    problem:
+      "Legacy resume builders feature predatory recurring subscription traps, rigid layouts that scramble when exported, poor ATS compatibility, and lack intelligent role-tailored content assistance.",
+    solution:
+      "Architected a high-performance modern SaaS platform with Next.js 16 App Router and Supabase PostgreSQL with Row-Level Security (RLS). Integrated Google Gemini and OpenAI APIs for context-rich bullet point generation, TipTap for interactive editing, and headless Chromium (Puppeteer) for serverless, pixel-perfect PDF rendering, complete with Lemon Squeezy and Stripe subscription monetization.",
+    keyFeatures: [
+      "AI Resume & Cover Letter Content Generation via OpenAI & Google Gemini APIs",
+      "Automated ATS compatibility scanner with a weighted criteria-based scoring engine",
+      "TipTap-powered rich text resume editor with inline styling and formatting controls",
+      "Interactive drag-and-drop section reordering using @dnd-kit",
+      "Serverless pixel-perfect PDF compilation using headless Chromium (Puppeteer)",
+      "Supabase Auth with SSR session management and PostgreSQL Row-Level Security (RLS)",
+      "Commercial SaaS billing & checkout integration with Lemon Squeezy and Stripe",
+      "Dynamic programmatic SEO comparison hub with published scoring rubrics",
+    ],
+    tech: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "OpenAI API",
+      "Gemini API",
+      "Puppeteer",
+      "PostgreSQL",
+      "Lemon Squeezy",
+    ],
+    github: "https://github.com/muhammadAsh1r/resume-builder.git",
+    live: "https://www.makeresume.pro",
+    image: "/projects/makeresume.webp",
+  },
+  {
     slug: "food-order-app",
     title: "Food Order App",
     category: "Full Stack",

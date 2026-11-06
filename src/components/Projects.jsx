@@ -83,25 +83,36 @@ const Projects = ({ limit = 3, isFullPage = false }) => {
             >
               {/* Project Card Header Area */}
               <div className="relative h-48 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent flex items-center justify-center overflow-hidden border-b border-secondary/5">
-                <div className="absolute inset-0 bg-bg-dark/30 group-hover:bg-transparent transition-colors duration-500" />
-                
-                {/* Decorative Icon */}
-                <div className="text-primary/30 group-hover:text-primary/60 transition-all duration-500 scale-125 group-hover:scale-150">
-                  <Layers size={44} />
-                </div>
+                {project.image ? (
+                  <>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/80 via-transparent to-bg-dark/40" />
+                  </>
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-bg-dark/30 group-hover:bg-transparent transition-colors duration-500" />
+                    <div className="text-primary/30 group-hover:text-primary/60 transition-all duration-500 scale-125 group-hover:scale-150">
+                      <Layers size={44} />
+                    </div>
+                  </>
+                )}
 
                 {/* Category Badge */}
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 z-10">
                   <span className="px-3 py-1 bg-bg-dark/80 backdrop-blur-md text-primary text-[10px] font-black uppercase tracking-wider rounded-full border border-primary/20 shadow-md">
                     {project.category}
                   </span>
                 </div>
 
                 {/* Detail Page Arrow Shortcut */}
-                <div className="absolute top-4 right-4">
+                <div className="absolute top-4 right-4 z-10">
                   <Link
                     href={`/projects/${project.slug}`}
-                    className="p-2 rounded-xl bg-bg-dark/60 text-secondary/70 hover:text-primary hover:bg-primary/20 border border-white/5 transition-all"
+                    className="p-2 rounded-xl bg-bg-dark/60 text-secondary/70 hover:text-primary hover:bg-primary/20 border border-white/5 transition-all backdrop-blur-md"
                     title="View Case Study"
                   >
                     <ArrowRight size={16} />
